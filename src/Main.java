@@ -23,8 +23,8 @@ public class Main {
                     Student.search(al);
                     break;
                 case 3:
-//                    Student.delete(al);
-//                    break;
+                    Student.delete(al);
+                    break;
                 case 4:
                     Student.display(al);
                     break;

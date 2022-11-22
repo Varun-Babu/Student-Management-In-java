@@ -62,21 +62,21 @@ public class Student {
         }
     }
 
-//    static void delete(ArrayList<Student> al) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("\nEnter Student ID to DELETE");
-//        int id = sc.nextInt();
-//        int k = 0;
-//        for (Student e : al) {
-//            if (id == e.id) {
-//                al.remove(e);
-//                Student.display(al);
-//                k++;
-//            }
-//        }
-//        if (k == 0) {
-//            System.out.println("\nStudent Details are not available, Please enter a valid ID!!");
-//        }
-//    }
+    static void delete(ArrayList<Student> al) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\nEnter Student ID to DELETE");
+        int id = sc.nextInt();
+        int k = 0;
+        for (Student e : al) {
+            if (id == e.id) {
+                al.remove(e);
+                Student.display(al);
+                k++;
+            }
+        }
+        if (k == 0) {
+            System.out.println("\nStudent Details are not available, Please enter a valid ID!!");
+        }
+    }
 
 }
