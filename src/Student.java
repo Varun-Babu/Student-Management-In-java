@@ -63,20 +63,40 @@ public class Student {
     }
 
     static void delete(ArrayList<Student> al) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("\nEnter Student ID to DELETE");
-        int id = sc.nextInt();
-        int k = 0;
-        for (Student e : al) {
-            if (id == e.id) {
-                al.remove(e);
-                Student.display(al);
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("\nEnter Student ID to DELETE");
+//        int id = sc.nextInt();
+//        int k = 0;
+//        for (Student e : al) {
+//            if (id == e.id) {
+//                al.remove(e);
+//                Student.display(al);
+//                k++;
+//            }
+//        }
+//        if (k == 0) {
+//            System.out.println("\nStudent Details are not available, Please enter a valid ID!!");
+//        }
+        Scanner sn = new Scanner(System.in);
+        System.out.println("Enter Student Id:");
+        int id = sn.nextInt();
+        int k =0;
+        for(int i=0; i<al.size();i++){
+            Student es = al.get(i);
+            if(id == es.id)
+            {
+                al.remove(es);
                 k++;
+                break;
             }
         }
-        if (k == 0) {
-            System.out.println("\nStudent Details are not available, Please enter a valid ID!!");
+        if(k ==0)
+        {
+            System.out.println("Sorry, no data exists with the id " +id);
         }
+            else{
+        System.out.println("Invalid Input");
     }
+}}
 
-}
